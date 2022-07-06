@@ -8,7 +8,7 @@ public class Room
 
     public Room()
     {
-        for (var i = 0; i < 20; i++)
+        for (var i = 0; i < 50; i++)
         {
             var person = new Person();
             People.Add(new Person());
@@ -18,26 +18,4 @@ public class Room
             }
         }
     }
-
-    public void WalkIn()
-    {
-        var person = new Person();
-        People.Add(person);
-        if (person.Violent == true)
-        {
-            Environment.Exit(0);
-        }
-        Decide(random.Next(0, People.Count));
-    }
-
-    private void Decide(int specificPerson) {
-        Thread.Sleep(random.Next(5000, 10000));
-        var decision = random.Next(1, 3);
-        if (decision == 1)
-        {
-            People.RemoveAt(specificPerson);
-        }
-    }
-
-    private Random random = new Random();
 }
