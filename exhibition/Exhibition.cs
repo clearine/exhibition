@@ -5,7 +5,7 @@ while (true) {
     Console.WriteLine(room.People.Count);
     for (var i = 0; i < 3; i++)
     {
-        Decide(room.People[random.Next(1, room.People.Count)]);
+        Decide(room.People[random.Next(room.People.Count)]);
     }
 }
 

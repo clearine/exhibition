@@ -1,7 +1,3 @@
-using System.Threading;
-using System.Collections.Generic;
-
-
 public class Room
 {
     public List<Person> People = new List<Person>();
